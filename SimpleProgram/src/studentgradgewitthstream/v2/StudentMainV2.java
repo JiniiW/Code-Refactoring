@@ -41,11 +41,11 @@ public class StudentMainV2 {
 
         System.out.println("\n\n========= 학생별 점수 =========");
 
-        List<ExamResult> examResult = new ArrayList<>();
+        List<ExamResult> totalExam = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             int totalScore = (korScoreList.get(i) + engScoreList.get(i) + mathScoreList.get(i));
             double averageScore = totalScore / 3.0;
-            examResult.add(new ExamResult(totalScore, averageScore));
+            totalExam.add(new ExamResult(totalScore, averageScore));
         }
 
         System.out.println("번호    이름     국어  영어  수학  총점   평균");
@@ -56,8 +56,8 @@ public class StudentMainV2 {
                     korScoreList.get(i),
                     engScoreList.get(i),
                     mathScoreList.get(i),
-                    examResult.get(i).getTotalScore(),
-                    examResult.get(i).getAverageScore());
+                    totalExam.get(i).getTotalScore(),
+                    totalExam.get(i).getAverageScore());
         }
     }
 
