@@ -1,10 +1,10 @@
 package studentgradgewitthstream.v2;
 
-public class ExamResult{
+public class ExamResult {
 
     //Student student;
     private Integer totalScore;
-    private Double  averageScore;
+    private Double averageScore;
 
     public ExamResult(Integer totalScore, Double averageScore) {
         this.totalScore = totalScore;
@@ -20,7 +20,7 @@ public class ExamResult{
         return averageScore;
     }
 
-      //메서드 -> main에서 구현
+    //메서드 -> main에서 구현
 /*    public void calculatorScore(){
         totalScore = student.getKorScore() + student.getEngScore() + student.getMathScore();
         averageScore = totalScore / 3.0;

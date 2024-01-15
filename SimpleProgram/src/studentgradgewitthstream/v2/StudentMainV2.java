@@ -8,12 +8,12 @@ import java.util.Scanner;
 public class StudentMainV2 {
 
     public static void main(String[] args) {
-        List<Student> stuList =new ArrayList<>();
+        List<Student> stuList = new ArrayList<>();
 
         Scanner input = new Scanner(System.in);
         System.out.println("5명 학생의 이름과 점수를 국어 영어 수학 순서대로 입력해주세요.");
         //String 배열 선언
-        for(int i = 0; i < 5; i++){
+        for (int i = 0; i < 5; i++) {
             String[] student = input.nextLine().split(" ");
             stuList.add(new Student(student[0], Integer.parseInt(student[1]), Integer.parseInt(student[2]), Integer.parseInt(student[3])));
         }
@@ -42,16 +42,16 @@ public class StudentMainV2 {
         System.out.println("\n\n========= 학생별 점수 =========");
 
         List<ExamResult> examResult = new ArrayList<>();
-        for(int i = 0; i < 5; i++){
+        for (int i = 0; i < 5; i++) {
             int totalScore = (korScoreList.get(i) + engScoreList.get(i) + mathScoreList.get(i));
             double averageScore = totalScore / 3.0;
             examResult.add(new ExamResult(totalScore, averageScore));
         }
 
         System.out.println("번호    이름     국어  영어  수학  총점   평균");
-        for(int i = 0; i < 5; i++){
+        for (int i = 0; i < 5; i++) {
             System.out.printf("%d번  %3s %4d %4d %4d %4d  %3.2f\n",
-                    i+1,
+                    i + 1,
                     stuList.get(i).getName(),
                     korScoreList.get(i),
                     engScoreList.get(i),
